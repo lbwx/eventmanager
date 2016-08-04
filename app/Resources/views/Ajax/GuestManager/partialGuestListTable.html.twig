@@ -1,0 +1,30 @@
+<table class="table table-striped table-hover table-condensed" id="guest-manager-form-guest-list">
+	<thead>
+		<tr>
+			<th>{{'Manager.Guest.LastName'|trans}}</th>
+			<th>{{'Manager.Guest.FirstName'|trans}}</th>
+			<th>{{'Manager.Guest.Title'|trans}}</th>
+			<th>{{'Manager.Guest.Employer'|trans}}</th>
+			<th colspan="3">{{'Base.Tables.Actions'|trans}}</th>
+		</tr>
+	</thead>
+	<tbody>
+		{%for guest in guests%}
+			<tr{% if guest.hidden %} class="guest-hidden"{% endif %} data-guest-id="{{guest.id}}">
+				<td>{{guest.lastName}}</td>
+				<td>{{guest.firstName}}</td>
+				<td>{{guest.title}}</td>
+				<td>{{guest.employer}}</td>
+				<td><span class="js-guest-edit button fa fa-folder-o" data-toggle="modal" data-target="#modal-window" title="more"></span></td>
+				<td>
+					{%if guest.hidden%}
+						<span class="js-guest-hide button fa fa-toggle-off" title="{{'Manager.Guest.Show'|trans}}"></span>
+					{%else%}
+						<span class="js-guest-hide button fa fa-toggle-on" title="{{'Manager.Guest.Hide'|trans}}"></span>
+					{%endif%}
+				</td>
+				<td class="js-delete-guest"><span class="js-guest-delete button fa fa-trash-o" title="{{'Manager.Guest.Delete'|trans}}"></span></td>
+			</tr>
+		{%endfor%}
+	</tbody>
+</table>

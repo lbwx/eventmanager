@@ -1,0 +1,65 @@
+# To get started with security, check out the documentation:
+# http://symfony.com/doc/current/book/security.html
+security:
+    encoders:
+        FOS\UserBundle\Model\UserInterface: bcrypt
+
+    role_hierarchy:
+        ROLE_ADMIN: ROLE_USER
+        ROLE_SUPER_ADMIN: ROLE_ADMIN
+
+    # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
+    providers:
+        fos_userbundle:
+            id: fos_user.user_provider.username
+                
+#        in_memory:
+#            memory: ~
+
+    firewalls:
+        main:
+            pattern: ^/
+            form_login:
+#                provider: fos_userbundle
+#                csrf_token_generator: security.csrf.token_manager
+                csrf_parameter: _csrf_security_token
+                csrf_token_id: a_private_string
+            logout: true
+            anonymous: true
+
+#            anonymous: ~
+#            form_login:
+#                # unauthenticated visitors will be redirected to homepage ('/')
+#                login_path: /
+#                check_path: login
+#                # redirect after successfull login
+#                default_target_path: event_manager
+#            logout:
+#                path: /logout
+#                target: /
+#            pattern: ^/test/
+#            http_basic: ~
+#            provider: db_provider
+        # disables authentication for assets and the profiler, adapt it according to your needs
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+            # activate different ways to authenticate
+
+            # http_basic: ~
+            # http://symfony.com/doc/current/book/security.html#a-configuring-how-your-users-will-authenticate
+
+            # form_login: ~
+            # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
+    access_control:
+        - { path: ^/$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/login, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/, role: ROLE_USER }
+        - { path: ^/admin/, role: ROLE_ADMIN }
+        
+        # Anonymous visitors can access only registration page, loginpage and home page! (yet)
+#        - {path: ^/(ajax/registration/|login|lang/.*|$), roles: IS_AUTHENTICATED_ANONYMOUSLY}
+        # Access to all subpages for logged user
+#        - {path: ^.*, roles: ROLE_USER}

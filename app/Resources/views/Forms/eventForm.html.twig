@@ -1,0 +1,26 @@
+<div id="wrapper">
+	<div id="container">
+		{{form_start(form, {'attr': {'id': 'manager-event-form'}})}}
+			{{form_row(form.name) }}
+			{{form_row(form.maxGuests)}}
+			{{form_row(form.start)}}
+			{{form_row(form.end)}}
+			{{form_row(form.place)}}
+			{{form_row(form.submit, {'label': submitLabel})}}
+		{{form_end(form)}}
+	</div>
+</div>
+{% block stylesheets %}
+	<style>
+		#manager-event-form {
+			text-align: right;
+			width: 40%;
+		}
+		#manager-event-form div div {
+			display: inline-block;
+		}
+		#manager-event-form label {
+			float: left;
+		}
+	</style>
+{% endblock %}

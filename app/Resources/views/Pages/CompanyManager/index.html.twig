@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="container">
+			<h1>{{'company.h1'|trans}} - {{company.name}}</h1>
+			<table>
+				<tr>
+					<td>{{'company.address'|trans}}<td>
+					<td>{{company.address}}<td>
+				</tr>
+				<tr>
+					<td>{{'company.zip'|trans}}<td>
+					<td>{{company.zip}}<td>
+				</tr>
+				<tr>
+					<td>{{'company.city'|trans}}<td>
+					<td>{{company.city}}<td>
+				</tr>
+				<tr>
+					<td>{{'company.country'|trans}}<td>
+					<td>{{company.country}}<td>
+				</tr>
+			</table>
+			<a class='button' title="edit" href="{{path('company_manager_edit')}}">{{'company.action_edit'|trans}}</a>
+			<h1>{{'company.users'|trans}}</h1>
+			<table id="user-list">
+				<thead>
+					<tr>
+						<td>{{'company.user.name'|trans}}</td>
+						<td>{{'company.user.email'|trans}}</td>
+						<td>{{'company.user.role'|trans}}</td>
+					</tr>
+				</thead>
+				<tbody>
+					{%for user in users%}
+						<tr>
+							<td>{{user.username}}</td>
+							<td>{{user.email}}</td>
+							<td>
+								<select>
+									<option>full</option>
+									<option>edit</option>
+									<option>read</option>
+									<option>none</option>
+								</select>
+							</td>
+						</tr>
+					{%endfor%}
+				</tbody>
+			</table>
+        </div>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+	<style>
+		#user-list td {
+			padding-left: 0.5em;
+		}
+		.button {
+			cursor: pointer;
+			border: 3px outset darkblue;
+			background-color: darkblue;
+		}
+	</style>
+{% endblock %}
+
+{#user rights:  full - create - read - none #}

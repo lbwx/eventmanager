@@ -1,0 +1,11 @@
+<div id="guest-form">
+	{{form_start(guestGroupForm, {'attr': {'id': 'guestGroup-manager-form'}})}}
+		{{form_row(guestGroupForm.name, {'attr': {'placeholder': 'Manager.Guest.GuestGroup'}}) }}
+		{{form_row(guestGroupForm.submit, {'label': 'Manager.GuestGroup.Add'})}}
+	{{form_end(guestGroupForm)}}
+</div>
+{% block stylesheets %}
+	<style>
+
+	</style>
+{% endblock %}

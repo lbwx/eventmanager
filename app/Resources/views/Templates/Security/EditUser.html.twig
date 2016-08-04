@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	{{form_start(userForm, {'attr': {'id': 'edit-user'}})}}
+		{{form_row(userForm.username, {'attr': {'placeholder': 'email'}})}}
+		{{form_row(userForm.email, {'attr': {'placeholder': 'username'}})}}
+		<img src="{{asset('images/avatars/' ~ user.avatar)}}" alt="{{user.username}}" style="width: 10em;" />
+		{{form_row(userForm.avatar, {'attr': {'placeholder': 'avatar'}})}}
+		{{form_row(userForm.submit, {'label': 'save'})}}
+	{{form_end(userForm)}}
+{% endblock %}

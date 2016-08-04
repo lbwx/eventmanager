@@ -1,0 +1,8 @@
+<form action="{{ path("fos_user_security_check") }}" method="post" class="form-horizontal">
+	<input type="text" name="_username" class="form-row" placeholder="{{'Base.Security.LoginForm.Name'|trans}}" />
+	<input type="password" name="_password" class="form-row" placeholder="{{'Base.Security.LoginForm.Password'|trans}}" />
+	<input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+    <label for="remember_me">{{ 'Base.Security.LoginForm.RememberMe'|trans }}</label>
+	<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+	<button type="submit">{{'Base.Security.Login'|trans}}</button>
+</form>

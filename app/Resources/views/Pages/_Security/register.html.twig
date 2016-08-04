@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="container">
+			<h2>Registration</h2>
+			{{ form_start(form, {'attr': {'id': 'form-user-registration'}}) }}
+			{{ form_row(form.username) }}
+			{{ form_row(form.email) }}
+			{{ form_row(form.plainPassword.first) }}
+			{{ form_row(form.plainPassword.second) }}
+
+			<button type="submit">Register!</button>
+			{{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+	<style>
+		#form-user-registration {
+			position: relative;
+			width: 220px;
+		}
+		#form-user-registration div {
+			margin-bottom: 0.5em;
+		}
+		#form-user-registration input {
+			width: 98px !important;
+			height: 18px !important;
+			float: right;
+		}
+		#form-user-registration button {
+			background-color: darkblue;
+			border-bottom-color: darkblue;
+			border-radius: 5px;
+			float: right;
+			color: white;
+			height: 23px;
+			width: 58px;
+		}
+	</style>
+{% endblock %}

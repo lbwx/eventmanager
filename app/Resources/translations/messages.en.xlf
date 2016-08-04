@@ -1,0 +1,424 @@
+<?xml version="1.0" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" original="file.ext">
+		<body>
+			<trans-unit id="Base.Menu">
+				<source>Base.Menu</source>
+				<target>Menu</target>
+			</trans-unit>
+
+			<trans-unit id="Base.Menu.EventManager">
+				<source>Base.Menu.EventManager</source>
+				<target>Event Manager</target>
+			</trans-unit>
+
+			<trans-unit id="Base.Menu.CompanyManager">
+				<source>Base.Menu.CompanyManager</source>
+				<target>Company Manager</target>
+			</trans-unit>
+
+			<trans-unit id="Base.Menu.GuestManager">
+				<source>Base.Menu.GuestManager</source>
+				<target>Guest Manager</target>
+			</trans-unit>
+
+			<trans-unit id="Base.Security.Registration">
+				<source>Base.Security.Registration</source>
+				<target>Registration</target>
+			</trans-unit>
+
+			<trans-unit id="Base.Security.Login">
+				<source>Base.Security.Login</source>
+				<target>Login</target>
+			</trans-unit>
+
+			<trans-unit id="Base.Security.LoginForm.Name">
+				<source>Base.Security.LoginForm.Name</source>
+				<target>User Name</target>
+			</trans-unit>
+
+			<trans-unit id="Base.Security.LoginForm.Password">
+				<source>Base.Security.LoginForm.Password</source>
+				<target>Password</target>
+			</trans-unit>
+
+			<trans-unit id="Base.Security.LoginForm.RememberMe">
+				<source>Base.Security.LoginForm.RememberMe</source>
+				<target>Remember me</target>
+			</trans-unit>
+
+			<trans-unit id="Base.Security.LogOut">
+				<source>Base.Security.LogOut</source>
+				<target>LogOut</target>
+			</trans-unit>
+
+			<trans-unit id="Base.Label.Language">
+				<source>Base.Label.Language</source>
+				<target>Lang</target>
+			</trans-unit>
+
+			<trans-unit id="Base.Forms.Search.Submit">
+				<source>Base.Forms.Search.Submit</source>
+				<target>Search</target>
+			</trans-unit>
+
+			<trans-unit id="Base.Forms.Search.Placeholder">
+				<source>Base.Forms.Search.Placeholder</source>
+				<target>Searching</target>
+			</trans-unit>
+
+			<trans-unit id="Base.Tables.Actions">
+				<source>Base.Tables.Actions</source>
+				<target>Actions</target>
+			</trans-unit>
+
+
+
+			<trans-unit id="EventManager.AppName">
+				<source>EventManager.AppName</source>
+				<target>Event Manager</target>
+			</trans-unit>
+
+			<trans-unit id="EventManager.Action.Create">
+				<source>EventManager.Action.Create</source>
+				<target>Add Event</target>
+			</trans-unit>
+
+			<trans-unit id="EventManager.Action.ShowFuture">
+				<source>EventManager.Action.ShowFuture</source>
+				<target>Show Future Events</target>
+			</trans-unit>
+
+			<trans-unit id="EventManager.Action.ShowPast">
+				<source>EventManager.Action.ShowPast</source>
+				<target>Show Past Events</target>
+			</trans-unit>
+
+			<trans-unit id="EventManager.Action.ShowDeleted">
+				<source>EventManager.Action.ShowDeleted</source>
+				<target>Show Deleted Event</target>
+			</trans-unit>
+
+			<trans-unit id="EventManager.Event.Name">
+				<source>EventManager.Event.Name</source>
+				<target>Name</target>
+			</trans-unit>
+
+			<trans-unit id="EventManager.Event.Edit">
+				<source>EventManager.Event.Edit</source>
+				<target>Edit</target>
+			</trans-unit>
+
+			<trans-unit id="EventManager.Event.InvitedGuests">
+				<source>EventManager.Event.InvitedGuests</source>
+				<target>Invited</target>
+			</trans-unit>
+
+			<trans-unit id="EventManager.Event.MaxGuests">
+				<source>EventManager.Event.MaxGuests</source>
+				<target>Max</target>
+			</trans-unit>
+
+			<trans-unit id="EventManager.Event.Start">
+				<source>EventManager.Event.Start</source>
+				<target>Start</target>
+			</trans-unit>
+
+			<trans-unit id="EventManager.Event.End">
+				<source>EventManager.Event.End</source>
+				<target>End</target>
+			</trans-unit>
+
+			<trans-unit id="EventManager.Event.Place">
+				<source>EventManager.Event.Place</source>
+				<target>Place</target>
+			</trans-unit>
+
+			<trans-unit id="EventManager.Event.Created">
+				<source>EventManager.Event.Created</source>
+				<target>Created</target>
+			</trans-unit>
+
+			<trans-unit id="EventManager.Event.Modified">
+				<source>EventManager.Event.Modified</source>
+				<target>Modified</target>
+			</trans-unit>
+
+			<trans-unit id="EventManager.Event.Hide">
+				<source>EventManager.Event.Hide</source>
+				<target>Show</target>
+			</trans-unit>
+
+			<trans-unit id="EventManager.Event.Restore">
+				<source>EventManager.Event.Restore</source>
+				<target>Restore</target>
+			</trans-unit>
+
+			<trans-unit id="EventManager.Event.Delete">
+				<source>EventManager.Event.Delete</source>
+				<target>Delete</target>
+			</trans-unit>
+			<trans-unit id="EventManager.Event.Actions">
+				<source>EventManager.Event.Action</source>
+				<target>Do:</target>
+			</trans-unit>
+			
+			
+			
+			
+			<trans-unit id="company.name">
+				<source>company.name</source>
+				<target>Company name</target>
+			</trans-unit>
+
+
+			<trans-unit id="company.h1">
+				<source>company.h1</source>
+				<target>Company</target>
+			</trans-unit>
+			<trans-unit id="company.address">
+				<source>company.address</source>
+				<target>Address</target>
+			</trans-unit>
+			<trans-unit id="company.zip">
+				<source>company.zip</source>
+				<target>ZIP</target>
+			</trans-unit>
+			<trans-unit id="company.city">
+				<source>company.city</source>
+				<target>City</target>
+			</trans-unit>
+			<trans-unit id="company.country">
+				<source>company.country</source>
+				<target>Country</target>
+			</trans-unit>
+			<trans-unit id="company.action_edit">
+				<source>company.action_edit</source>
+				<target>Edit company data</target>
+			</trans-unit>
+			<trans-unit id="company.users">
+				<source>company.users</source>
+				<target>Users</target>
+			</trans-unit>
+			<trans-unit id="company.user.name">
+				<source>company.user.name</source>
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="company.user.email">
+				<source>company.user.email</source>
+				<target>Email</target>
+			</trans-unit>
+			<trans-unit id="company.user.role">
+				<source>company.user.role</source>
+				<target>Rights</target>
+			</trans-unit>
+			
+			
+			
+			
+			<trans-unit id="flash.company.updated">
+				<source>flash.company.updated</source>
+				<target>Company data updated.</target>
+			</trans-unit>
+
+
+
+			<trans-unit id="company.form.update">
+				<source>company.form.update</source>
+				<target>Update company</target>
+			</trans-unit>
+			
+			
+			
+			
+			
+			<trans-unit id="Manager.Event.Id">
+				<source>Manager.Event.Id</source>
+				<target>Id</target>
+			</trans-unit>
+			<trans-unit id="Manager.Event.Name">
+				<source>Manager.Event.Name</source>
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="Manager.Event.Edit">
+				<source>Manager.Event.Edit</source>
+				<target>Edit</target>
+			</trans-unit>
+			<trans-unit id="Manager.Event.InvitedGuests">
+				<source>Manager.Event.InvitedGuests</source>
+				<target>Invited Guests</target>
+			</trans-unit>
+			<trans-unit id="Manager.Event.MaxGuests">
+				<source>Manager.Event.MaxGuests</source>
+				<target>Max Guests</target>
+			</trans-unit>
+			<trans-unit id="Manager.Event.Start">
+				<source>Manager.Event.Start</source>
+				<target>Begin</target>
+			</trans-unit>
+			<trans-unit id="Manager.Event.End">
+				<source>Manager.Event.End</source>
+				<target>End</target>
+			</trans-unit>
+			<trans-unit id="Manager.Event.Place">
+				<source>Manager.Event.Place</source>
+				<target>Place</target>
+			</trans-unit>
+			<trans-unit id="Manager.Event.Created">
+				<source>Manager.Event.Created</source>
+				<target>Created</target>
+			</trans-unit>
+			<trans-unit id="Manager.Event.Modified">
+				<source>Manager.Event.Modified</source>
+				<target>Updated</target>
+			</trans-unit>
+			<trans-unit id="Manager.Event.Hide">
+				<source>Manager.Event.Hide</source>
+				<target>Show</target>
+			</trans-unit>
+			<trans-unit id="Manager.Event.Restore">
+				<source>Manager.Event.Restore</source>
+				<target>Restore</target>
+			</trans-unit>
+			<trans-unit id="Manager.Event.Delete">
+				<source>Manager.Event.Delete</source>
+				<target>Delete</target>
+			</trans-unit>
+			<trans-unit id="Manager.Event.Submit.Create">
+				<source>Manager.Event.Submit.Create</source>
+				<target>Create</target>
+			</trans-unit>
+			<trans-unit id="Manager.Event.Submit.Update">
+				<source>Manager.Event.Submit.Update</source>
+				<target>Update</target>
+			</trans-unit>
+
+			<trans-unit id="Manager.Guest.Delete">
+				<source>Manager.Guest.Delete</source>
+				<target>Delete</target>
+			</trans-unit>
+			<trans-unit id="Manager.Guest.Hide">
+				<source>Manager.Guest.Hide</source>
+				<target>Hide</target>
+			</trans-unit>
+			<trans-unit id="Manager.Guest.Show">
+				<source>Manager.Guest.Show</source>
+				<target>Show</target>
+			</trans-unit>
+
+			<trans-unit id="Manager.Guest.FormGroup.Guest">
+				<source>Manager.Guest.FormGroup.Guest</source>
+				<target>Guest Data</target>
+			</trans-unit>
+			<trans-unit id="Manager.Guest.FormGroup.Address">
+				<source>Manager.Guest.FormGroup.Address</source>
+				<target>Address Data</target>
+			</trans-unit>
+			<trans-unit id="Manager.Guest.FormGroup.Contact">
+				<source>Manager.Guest.FormGroup.Contact</source>
+				<target>Contact Data</target>
+			</trans-unit>
+			<trans-unit id="Manager.Guest.FormGroup.Defaults">
+				<source>Manager.Guest.FormGroup.Defaults</source>
+				<target>Default settings</target>
+			</trans-unit>
+			<trans-unit id="Manager.Guest.FirstName">
+				<source>Manager.Guest.FirstName</source>
+				<target>First Name</target>
+			</trans-unit>
+			<trans-unit id="Manager.Guest.LastName">
+				<source>Manager.Guest.LastName</source>
+				<target>Last Name</target>
+			</trans-unit>
+			<trans-unit id="Manager.Guest.Title">
+				<source>Manager.Guest.Title</source>
+				<target>Title</target>
+			</trans-unit>
+			<trans-unit id="Manager.Guest.Company">
+				<source>Manager.Guest.Company</source>
+				<target>Company</target>
+			</trans-unit>
+			<trans-unit id="Manager.Guest.Employer">
+				<source>Manager.Guest.Employer</source>
+				<target>Employer</target>
+			</trans-unit>
+			
+			<trans-unit id="Manager.Guest.Plus">
+				<source>Manager.Guest.Plus</source>
+				<target>Plus</target>
+			</trans-unit>
+			<trans-unit id="Manager.Guest.Vip">
+				<source>Manager.Guest.Vip</source>
+				<target>VIP</target>
+			</trans-unit>
+			<trans-unit id="Manager.Guest.Info">
+				<source>Manager.Guest.Info</source>
+				<target>Info</target>
+			</trans-unit>
+			<trans-unit id="Manager.Guest.Address">
+				<source>Manager.Guest.Address</source>
+				<target>Address</target>
+			</trans-unit>
+			<trans-unit id="Manager.Guest.City">
+				<source>Manager.Guest.City</source>
+				<target>City</target>
+			</trans-unit>
+			<trans-unit id="Manager.Guest.Zip">
+				<source>Manager.Guest.Zip</source>
+				<target>ZIP</target>
+			</trans-unit>
+			<trans-unit id="Manager.Guest.Country">
+				<source>Manager.Guest.Country</source>
+				<target>Country</target>
+			</trans-unit>
+			<trans-unit id="Manager.Guest.Phone">
+				<source>Manager.Guest.Phone</source>
+				<target>Phone</target>
+			</trans-unit>
+			<trans-unit id="Manager.Guest.MobilePhone">
+				<source>Manager.Guest.MobilePhone</source>
+				<target>Mobile Phone</target>
+			</trans-unit>
+			<trans-unit id="Manager.Guest.Email">
+				<source>Manager.Guest.Email</source>
+				<target>Email</target>
+			</trans-unit>
+			<trans-unit id="Manager.Guest.Submit.Create">
+				<source>Manager.Guest.Submit.Create</source>
+				<target>Add Guest</target>
+			</trans-unit>
+			<trans-unit id="Manager.Guest.GuestGroup">
+				<source>Manager.Guest.GuestGroup</source>
+				<target>Guest Group</target>
+			</trans-unit>
+			<trans-unit id="Manager.Guest.GuestGroups">
+				<source>Manager.Guest.GuestGroups</source>
+				<target>Guest Groups:</target>
+			</trans-unit>
+			<trans-unit id="Manager.GuestGroup.Add">
+				<source>Manager.GuestGroup.Add</source>
+				<target>Add Group</target>
+			</trans-unit>
+			<trans-unit id="Manager.GuestGroup.NewGroupName">
+				<source>Manager.GuestGroup.NewGroupName</source>
+				<target>New Group Name</target>
+			</trans-unit>
+			<trans-unit id="Manager.GuestGroup.Flash.Created">
+				<source>Manager.GuestGroup.Flash.Created</source>
+				<target>New guest group was successfully created!</target>
+			</trans-unit>
+			<trans-unit id="Manager.Guest.Flash.Created">
+				<source>Manager.Guest.Flash.Created</source>
+				<target>New guest was successfully added!</target>
+			</trans-unit>
+			<trans-unit id="Manager.GuestGroup.List.Show">
+				<source>Manager.GuestGroup.List.Show</source>
+				<target>Show GuestGroup List</target>
+			</trans-unit>
+			<trans-unit id="Manager.GuestGroup.List.Hide">
+				<source>Manager.GuestGroup.List.Hide</source>
+				<target>Hide GuestGroup List</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

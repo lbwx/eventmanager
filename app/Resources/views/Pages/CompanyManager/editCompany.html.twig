@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="container">
+			{{form_start(form, {'attr': {'id': 'company-manager-edit'}})}}
+			{{form_row(form.address)}}
+			{{form_row(form.zip)}}
+			{{form_row(form.city)}}
+			{{form_row(form.country)}}
+			<button type="submit">{{'company.form.update'|trans}}</button>
+			{{form_end(form)}}
+        </div>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+	<style>
+		#company-manager-edit {
+			margin-top: 2em;
+			width: 300px;
+			text-align: right;
+		}
+		#company-manager-edit input {
+			margin-left: 1em;
+		}
+	</style>
+{% endblock %}

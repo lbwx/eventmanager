@@ -1,0 +1,117 @@
+{{form_start(form, {'attr': {'role': 'form', 'class': 'form-horizontal', 'id': 'accordion'}})}}
+	<fieldset class="panel">
+		<legend class="btn btn-default" data-toggle="collapse" data-target="#guest" data-parent="#accordion">{{'Manager.Guest.FormGroup.Guest'|trans}}</legend>
+		<div id="guest" class="panel-collapse collapse in">
+			<div class="form-group">
+				{{form_label(form.firstName, null, {'label_attr': {'class':'control-label col-sm-3'}})}}
+				<div class="col-sm-9">
+					{{form_widget(form.firstName, {'attr': {'class': 'form-control'}})}}
+				</div>
+			</div>
+			<div class="form-group">
+				{{form_label(form.lastName, null, {'label_attr': {'class':'control-label col-sm-3'}})}}
+				<div class="col-sm-9">
+					{{form_widget(form.lastName, {'attr': {'class': 'form-control'}})}}
+				</div>
+			</div>
+			<div class="form-group">
+				{{form_label(form.title, null, {'label_attr': {'class':'control-label col-sm-3'}})}}
+				<div class="col-sm-9">
+					{{form_widget(form.title, {'attr': {'class': 'form-control'}})}}
+				</div>
+			</div>
+			<div class="form-group">
+				{{form_label(form.employer, null, {'label_attr': {'class':'control-label col-sm-3'}})}}
+				<div class="col-sm-9">
+					{{form_widget(form.employer, {'attr': {'class': 'form-control'}})}}
+				</div>
+			</div>
+			<div class="form-group">
+				{{form_label(form.guestgroup, null, {'label_attr': {'class':'control-label col-sm-3'}})}}
+				<div class="col-sm-9">
+					{{form_widget(form.guestgroup, {'attr': {'class': 'form-control'}})}}
+				</div>
+			</div>
+			<div class="form-group">
+				{{form_label(form.info, null, {'label_attr': {'class':'control-label col-sm-3'}})}}
+				<div class="col-sm-9">
+					{{form_widget(form.info, {'attr': {'class': 'form-control'}})}}
+				</div>
+			</div>
+		</div>
+	</fieldset>
+	<fieldset class="panel">
+		<legend class="btn btn-default" data-toggle="collapse" data-target="#contact" data-parent="#accordion">{{'Manager.Guest.FormGroup.Contact'|trans}}</legend>
+		<div id="contact" class="panel-collapse collapse">
+			<div class="form-group">
+				{{form_label(form.phone, null, {'label_attr': {'class':'control-label col-sm-3'}})}}
+				<div class="col-sm-9">
+					{{form_widget(form.phone, {'attr': {'class': 'form-control'}})}}
+				</div>
+			</div>
+			<div class="form-group">
+				{{form_label(form.mobilePhone, null, {'label_attr': {'class':'control-label col-sm-3'}})}}
+				<div class="col-sm-9">
+					{{form_widget(form.mobilePhone, {'attr': {'class': 'form-control'}})}}
+				</div>
+			</div>
+			<div class="form-group">
+				{{form_label(form.email, null, {'label_attr': {'class':'control-label col-sm-3'}})}}
+				<div class="col-sm-9">
+					{{form_widget(form.email, {'attr': {'class': 'form-control'}})}}
+				</div>
+			</div>
+		</div>
+	</fieldset>
+	<fieldset class="panel">
+		<legend class="btn btn-default" data-toggle="collapse" data-target="#address" data-parent="#accordion">{{'Manager.Guest.FormGroup.Address'|trans}}</legend>
+		<div id="address" class="panel-collapse collapse">
+			<div class="form-group">
+				{{form_label(form.address, null, {'label_attr': {'class':'control-label col-sm-3'}})}}
+				<div class="col-sm-9">
+					{{form_widget(form.address, {'attr': {'class': 'form-control'}})}}
+				</div>
+			</div>
+			<div class="form-group">
+				{{form_label(form.city, null, {'label_attr': {'class':'control-label col-sm-3'}})}}
+				<div class="col-sm-9">
+					{{form_widget(form.city, {'attr': {'class': 'form-control'}})}}
+				</div>
+			</div>
+			<div class="form-group">
+				{{form_label(form.zip, null, {'label_attr': {'class':'control-label col-sm-3'}})}}
+				<div class="col-sm-9">
+					{{form_widget(form.zip, {'attr': {'class': 'form-control'}})}}
+				</div>
+			</div>
+			<div class="form-group">
+				{{form_label(form.country, null, {'label_attr': {'class':'control-label col-sm-3'}})}}
+				<div class="col-sm-9">
+					{{form_widget(form.country, {'attr': {'class': 'form-control'}})}}
+				</div>
+			</div>
+		</div>
+	</fieldset>
+	<fieldset class="panel">
+		<legend class="btn btn-default" data-toggle="collapse" data-target="#defaults" data-parent="#accordion">{{'Manager.Guest.FormGroup.Defaults'|trans}}</legend>
+		<hr>
+		<div id="defaults" class="panel-collapse collapse">
+			<div class="form-group">
+				{{form_label(form.plus, null, {'label_attr': {'class':'control-label col-sm-3'}})}}
+				<div class="col-sm-9">
+					{{form_widget(form.plus, {'attr': {'class': 'form-control'}})}}
+				</div>
+			</div>
+			<div class="form-group">
+				{{form_label(form.vip, null, {'label_attr': {'class':'control-label col-sm-3'}})}}
+				<div class="col-sm-1">
+					{{form_widget(form.vip, {'attr': {'class': 'form-control'}})}}
+				</div>
+				<div class="col-sm-8"></div>
+			</div>
+		</div>
+	</fieldset>
+	<fieldset>
+	{{form_row(form.submit, {'attr': {'class': 'btn btn-default pull-right'}})}}
+	</fieldset>
+{{form_end(form)}}

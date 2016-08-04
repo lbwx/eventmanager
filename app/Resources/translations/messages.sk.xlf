@@ -1,0 +1,123 @@
+<?xml version="1.0" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" original="file.ext">
+		<body>
+			<trans-unit id="Base.Menu">
+				<source>Base.Menu</source>
+				<target>Menu</target>
+			</trans-unit>
+
+			<trans-unit id="Base.Menu.EventManager">
+				<source>Base.Menu.EventManager</source>
+				<target>Event Manager</target>
+			</trans-unit>
+
+			<trans-unit id="Base.Menu.CompanyManager">
+				<source>Base.Menu.CompanyManager</source>
+				<target>Company Manager</target>
+			</trans-unit>
+
+			<trans-unit id="Base.Menu.GuestManager">
+				<source>Base.Menu.GuestManager</source>
+				<target>Guest Manager</target>
+			</trans-unit>
+
+			<trans-unit id="Base.Security.Registration">
+				<source>Base.Security.Registration</source>
+				<target>Registrácia</target>
+			</trans-unit>
+
+			<trans-unit id="Base.Security.Login">
+				<source>Base.Security.Login</source>
+				<target>Prihlásiť</target>
+			</trans-unit>
+
+			<trans-unit id="Base.Security.LoginForm.Name">
+				<source>Base.Security.LoginForm.Name</source>
+				<target>Meno</target>
+			</trans-unit>
+
+			<trans-unit id="Base.Security.LoginForm.Password">
+				<source>Base.Security.LoginForm.Password</source>
+				<target>Heslo</target>
+			</trans-unit>
+
+			<trans-unit id="Base.Security.LogOut">
+				<source>Base.Security.LogOut</source>
+				<target>Odhlásiť</target>
+			</trans-unit>
+
+			<trans-unit id="Base.Label.Language">
+				<source>Base.Label.Language</source>
+				<target>Jazyk</target>
+			</trans-unit>
+
+			<trans-unit id="Base.Forms.Search.Submit">
+				<source>Base.Forms.Search.Submit</source>
+				<target>Hľadať</target>
+			</trans-unit>
+
+			<trans-unit id="Base.Forms.Search.Placeholder">
+				<source>Base.Forms.Search.Placeholder</source>
+				<target>Vyhľadávanie</target>
+			</trans-unit>
+
+
+
+
+			<trans-unit id="main.welcome">
+				<source>main.welcome</source>
+				<target>Vitajte v aplikácii Event Manager</target>
+			</trans-unit>
+			<trans-unit id="main.login.loged_as">
+				<source>main.login.logged_as</source>
+				<target>Prihlásený:</target>
+			</trans-unit>
+			<trans-unit id="main.login.logout">
+				<source>main.login.logout</source>
+				<target>Odhlásiť</target>
+			</trans-unit>
+
+			<trans-unit id="manager_table_header.event.id">
+				<source>manager_table_header.event.id</source>
+				<target>Id</target>
+			</trans-unit>
+			<trans-unit id="manager_table_header.event.name">
+				<source>manager_table_header.event.name</source>
+				<target>Názov</target>
+			</trans-unit>
+			<trans-unit id="manager_table_header.event.start">
+				<source>manager_table_header.event.start</source>
+				<target>Začiatok</target>
+			</trans-unit>
+			<trans-unit id="manager_table_header.event.end">
+				<source>manager_table_header.event.end</source>
+				<target>Koniec</target>
+			</trans-unit>
+			<trans-unit id="manager_table_header.event.place">
+				<source>manager_table_header.event.place</source>
+				<target>Miesto</target>
+			</trans-unit>
+			<trans-unit id="manager_table_header.event.created">
+				<source>manager_table_header.event.created</source>
+				<target>Pridané</target>
+			</trans-unit>
+			<trans-unit id="manager_table_header.event.updated">
+				<source>manager_table_header.event.updated</source>
+				<target>Zmenené</target>
+			</trans-unit>
+			<trans-unit id="manager_table_header.event.hide">
+				<source>manager_table_header.event.hide</source>
+				<target>Skryť</target>
+			</trans-unit>
+			<trans-unit id="manager_table_header.event.restore">
+				<source>manager_table_header.event.restore</source>
+				<target>Obnoviť</target>
+			</trans-unit>
+			<trans-unit id="manager_table_header.event.delete">
+				<source>manager_table_header.event.delete</source>
+				<target>Vymazať</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

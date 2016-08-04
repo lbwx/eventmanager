@@ -1,0 +1,7 @@
+{{ form_start(groupForm, {'attr': {'id': 'ajax-new-group-form', 'class': 'form-inline', 'role': 'form'}}) }}
+	<div class="form-group pull-left">
+		{{form_widget(groupForm.name, {'attr': {'class': 'form-control', 'placeholder': 'Manager.GuestGroup.NewGroupName'|trans}})}}
+		{{form_widget(groupForm.submit, {'attr': {'class': 'form-control'}})}}
+	</div>
+	{{form_rest(groupForm)}}
+{{form_end(groupForm)}}

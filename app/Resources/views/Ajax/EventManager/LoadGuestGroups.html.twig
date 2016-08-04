@@ -1,0 +1,39 @@
+<form id="accordion" action="{{path('events_test')}}" method="post" name="guests">
+	{%for group in guestGroups%}
+		<div class="panel">
+			<div class="btn btn-default" data-toggle="collapse" data-target="#group-{{group.id}}" data-parent="#accordion">{{group.name}} ({{group.guests|length}})</div>
+			<div id="group-{{group.id}}" class="panel-collapse collapse{%if group.default%} in{%endif%}">
+				<div class="row">
+					<span class="col-md-3">Name</span>
+					<span class="col-md-3">Company</span>
+					<span class="col-md-4">Plus</span>
+					<span class="col-md-1">VIP</span>
+					<span class="col-md-1">Inv</span>
+				</div>
+				{%for guest in group.guests%}
+					<div class="row">
+						<span class="col-md-3">{{guest.title}} {{guest.firstName}} {{guest.lastName}}</span>
+						<span class="col-md-3">{{guest.employer}}</span>
+						{% set invExist = false %}
+						{% for invitation in guest.invitations %}
+							{% if invitation in invitations %}
+								{% set invExist = true %}
+								<span class="col-md-4"><input name="guest[{{guest.id}}][plus]" type="number" value="{{invitation.plus}}" /></span>
+								<span class="col-md-1"><input name="guest[{{guest.id}}][vip]" value="true" type="checkbox"{% if invitation.vip %} checked{% endif %} /></span>
+								<span class="col-md-1"><input name="guest[{{guest.id}}][invite]" value="true" type="checkbox"{% if not invitation.deleted %} checked{% endif %} /></span>
+							{% endif %}
+						{% endfor %}
+						{% if not invExist %}
+							<span class="col-md-4"><input name="guest[{{guest.id}}][plus]" type="number" value="{{guest.plus}}" /></span>
+							<span class="col-md-1"><input name="guest[{{guest.id}}][vip]" value="true" type="checkbox"{% if guest.vip %} checked{% endif %} /></span>
+							<span class="col-md-1"><input name="guest[{{guest.id}}][invite]" value="true" type="checkbox" /></span>
+						{% endif %}
+						<input type="hidden" name="guest[{{guest.id}}][invitation]" value="{% for invitation in guest.invitations %}{% if invitation in invitations %}exist{% endif %}{% endfor %}" />
+					</div>
+				{%endfor%}
+			</div>
+		</div>
+	{%endfor%}
+	<input type="hidden" name="eventId" value="{{event.id}}" />
+	<input type="submit" value="Add" />
+</form>

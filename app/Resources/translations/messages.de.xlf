@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" original="file.ext">
+		<body>
+			<trans-unit id="main.welcome">
+				<source>main.welcome</source>
+				<target>Willkommen zum Event Manager</target>
+			</trans-unit>
+			<trans-unit id="main.login.loged_as">
+				<source>main.login.logged_as</source>
+				<target>Angemeldet als:</target>
+			</trans-unit>
+			<trans-unit id="main.login.logout">
+				<source>main.login.logout</source>
+				<target>Ausloggen</target>
+			</trans-unit>
+			
+			
+			
+			
+			<trans-unit id="manager_table_header.event.id">
+				<source>manager_table_header.event.id</source>
+				<target>Id</target>
+			</trans-unit>
+			<trans-unit id="manager_table_header.event.name">
+				<source>manager_table_header.event.name</source>
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="manager_table_header.event.start">
+				<source>manager_table_header.event.start</source>
+				<target>Start</target>
+			</trans-unit>
+			<trans-unit id="manager_table_header.event.end">
+				<source>manager_table_header.event.end</source>
+				<target>Ende</target>
+			</trans-unit>
+			<trans-unit id="manager_table_header.event.place">
+				<source>manager_table_header.event.place</source>
+				<target>Ort</target>
+			</trans-unit>
+			<trans-unit id="manager_table_header.event.created">
+				<source>manager_table_header.event.created</source>
+				<target>Erstellt</target>
+			</trans-unit>
+			<trans-unit id="manager_table_header.event.updated">
+				<source>manager_table_header.event.updated</source>
+				<target>Aktualisiert</target>
+			</trans-unit>
+			<trans-unit id="manager_table_header.event.hide">
+				<source>manager_table_header.event.hide</source>
+				<target>Verstecken</target>
+			</trans-unit>
+			<trans-unit id="manager_table_header.event.restore">
+				<source>manager_table_header.event.restore</source>
+				<target>Genesen</target>
+			</trans-unit>
+			<trans-unit id="manager_table_header.event.delete">
+				<source>manager_table_header.event.delete</source>
+				<target>Löschen</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

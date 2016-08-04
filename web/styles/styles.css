@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+/*------------------------------------*\
+    #Global
+\*------------------------------------*/
+
+body {
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+	color: #003b5d;
+	padding-top: 4em;
+}
+.lang-icon {
+	width: 3em;
+	border: 1px solid black;
+}
+.icon {
+	display: inline-block;
+	background-size: 100% 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+}
+.icon-logo {
+	width: 5em;
+	height: 1em;
+	background-image: url(../images/Logo.png);
+}
+.icon-link {
+	cursor: pointer;
+}

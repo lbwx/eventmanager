@@ -1,0 +1,125 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="container">
+			<h1>EventManager</h1>
+			<div class="event-menu">
+				<a title="Add event" href="{{path('event_manager_create')}}"><i class="fa fa-plus"></i></a>
+				<a title="Show future events" href="{{path('event_manager', {'list-mode':'future'})}}"><i class="fa fa-tasks"></i></a>
+				<a title="Show past events" href="{{path('event_manager', {'list-mode':'past'})}}"><i class="fa fa-history"></i></a>
+				<a title="Show deleted events" href="{{path('event_manager', {'list-mode':'trash'})}}"><i class="fa fa-recycle"></i></a>
+			</div>
+			<table>
+				<thead>
+					<tr>
+						<td>{{'Manager.Event.Name'|trans}}</td>
+						<td>{{'Manager.Event.Edit'|trans}}</td>
+						<td>{{'Manager.Event.InvitedGuests'|trans}}</td>
+						<td>{{'Manager.Event.MaxGuests'|trans}}</td>
+						<td>{{'Manager.Event.Start'|trans}}</td>
+						<td>{{'Manager.Event.End'|trans}}</td>
+						<td>{{'Manager.Event.Place'|trans}}</td>
+						<td>{{'Manager.Event.Created'|trans}}</td>
+						<td>{{'Manager.Event.Modified'|trans}}</td>
+						<td>{{'Manager.Event.Hide'|trans}}</td>
+						<td>{% if currentMode == 'trash'  %}
+								{{'Manager.Event.Restore'|trans }}
+							{% else %}
+								{{'Manager.Event.Delete'|trans }}
+							{% endif %}
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					{% for event in events %}
+						<tr id="event-{{event.id}}"{% if event.hidden %} class="event-hidden"{% endif %}>
+							<td>{{event.name}}</td>
+							<td><a href="{{path('event_manager_edit', {'event-id':event.id})}}" class="button fa fa-pencil"></a></td>
+							<td>[INT]</td>
+							<td>{{event.maxGuests}}</td>
+							<td>{{event.start|date('H:i, d.m.Y')}}</td>
+							<td>{{event.end|date('H:i, d.m.Y')}}</td>
+							<td>{{event.place}}</td>
+							<td>{{event.created|date('H:i:s - d.m.Y')}}</td>
+							<td class="js-event-modified">{{event.modified|date('H:i:s - d.m.Y')}}</td>
+							<td>
+								{%if event.hidden%}
+									<span data-id="{{event.id}}" data-action="show" class="js-hide-event button fa fa-toggle-off"></span>
+								{%else%}
+									<span data-id="{{event.id}}" data-action="hide" class="js-hide-event button fa fa-toggle-on"></span>
+								{%endif%}
+								
+								{#<input class="js-hide-event" type="checkbox" data-id="{{event.id}}" name="event[{{event.id}}]"{% if event.hidden %} checked="checked"{% endif %} />#}
+							</td>
+							<td>
+								{% if event.deleted %}
+									<a href="{{path('event_manager_restore', {'event-id': event.id})}}"><i class="event-delete fa fa-undo"></i></a>
+								{% else %}
+									<a href="{{path('event_manager_delete', {'event-id': event.id})}}"><i class="event-delete fa fa-trash-o"></i></a>
+								{% endif %}
+							</td>
+						</tr>
+						
+					{% endfor %}
+				</tbody>
+			</table>
+        </div>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+	<style>
+		table {
+			border: 1px solid black;
+			border-spacing: 0px;
+			border-collapse: separate;
+		}
+		td {
+			padding: 2px 5px 2px 5px;
+			border: 1px solid black;
+		}
+
+		.event-hidden {
+			background-color: rgba(0,0,0,0.3);
+		}
+
+		.event-menu {
+			position: fixed;
+			right: 2em;
+			top: calc(120px + 2em);
+			display: block;
+		}
+
+		.event-delete {
+			font-size: 32px;
+			color: grey;
+			cursor: pointer;
+		}
+		.event-delete:hover {
+			color: red;
+		}
+
+		.event-menu a {
+			display: block;
+			margin-bottom: 0.5em;
+		}
+
+		.event-menu i {
+			font-size: 45px;
+			color: darkblue;
+			cursor: pointer;
+		}
+		.event-menu i:hover {
+			color: greenyellow;
+		}
+		.button {
+			color: gray !important;
+			cursor: pointer;
+			font-size: 2em !important;
+		}
+		.button:hover {
+			color: darkblue !important;
+		}
+	</style>
+{% endblock %}

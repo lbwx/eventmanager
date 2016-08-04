@@ -1,0 +1,119 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="row">
+		<div class="col-md-4 col-md-offset-1">
+			<h1>&nbsp;</h1>
+		</div>
+		<div class="col-md-6 pull-right">
+			<button class="btn btn-default js-guest-create" title="Create Guest" data-toggle="modal" data-target="#modal-window">Add Guest</button>
+			<select class="btn btn-info js-change-guest-group">
+				{%for guestGroup in guestGroups%}
+					<option value="{{guestGroup.id}}"{%if guestGroup==currentGroup%} selected{%endif%}>Group: {{guestGroup.name}}</option>
+				{%endfor%}
+			</select>
+			<button class="btn btn-default js-open-guest-groups" title="Manage Guest Groups" data-toggle="modal" data-target="#modal-window">Manage Guest Groups</button>
+		</div>
+	</div>
+	<div class="col-md-10 col-md-offset-1" id="table-guest-list"></div>
+{% endblock %}
+{% block stylesheets %}
+	<style>
+		.button {
+			cursor: pointer;
+		}
+		legend {
+			margin-bottom: 0.5em !important;
+		}
+		.guest-hidden {
+			background-color: rgba(0,0,0,0.1) !important;
+		}
+		.guest-hidden:hover {
+			background-color: rgba(0,0,0,0.2) !important;
+		}
+	</style>
+{% endblock %}
+{% block javascript %}
+	<script type='text/javascript'>
+		$(document).ready(function(){
+			//[L:] Respone functions
+			function loadGuestGroupTable(response) {
+				$('#modal-window .modal-body').html(response.result);
+				$('#modal-window .modal-footer-content').html(response.groupForm);
+			}
+			function loadGuestList(result) {
+				$('#table-guest-list').html(result);
+			}
+			function openGuestEditor(result) {
+				$('#modal-window .modal-body').html(result);
+			}
+			function handleAjaxResponse(response){
+				if(!response.status) { alert(response.error); return; }
+				switch(response.callback){
+					case 'loadGuestGroups': loadGuestGroupTable(response); break;
+					case 'loadGuestList': loadGuestList(response.result); break;
+					case 'openGuestEditor': openGuestEditor(response.result); break;
+				}
+			};
+			function createAjaxRequest(data){
+				$.ajax({
+					type: 'POST',
+					url: "{{path('guest_manager_ajax_requests')}}",
+					dataType: 'json',
+					data: data,
+					success: function(response){ handleAjaxResponse(response); }
+				});
+			}
+			/************************/
+			/*		GuestList		*/
+			/************************/
+			createAjaxRequest({action: 'loadGuests'});
+			$(document).on('click', '.js-guest-create', function(){createAjaxRequest({action: 'createGuest'});});
+			$(document).on('click', '.js-guest-edit', function(){createAjaxRequest({action: 'editGuest', guestId: $(this).closest('tr').data('guest-id')});});
+			$(document).on('click', '.js-guest-hide', function(){createAjaxRequest({action: 'hideGuest', guestId: $(this).closest('tr').data('guest-id')});});
+			$(document).on('click', '.js-guest-delete', function(){createAjaxRequest({action: 'deleteGuest', guestId: $(this).closest('tr').data('guest-id')});});
+			/************************/
+			/*		GuestGroups		*/
+			/************************/
+
+			$('.js-change-guest-group').change(function(){createAjaxRequest({action: 'changeCurrentGroup', groupId: $(this).val()});});
+
+			$('.js-open-guest-groups').click(function(){createAjaxRequest({action: 'loadGuestGroups'});});
+
+			$(document).on('submit', '#ajax-new-group-form', function(){
+				createAjaxRequest(
+					$(this).serialize() + '&action=addGuestGroup'
+				);
+				return false;
+			});
+
+			$(document).on('click', '.js-guest-group-delete', function(){createAjaxRequest({action: 'deleteGuestGroup', groupId: $(this).closest('tr').data('group-id')});});
+
+			$(document).on('dblclick', '.js-guest-group-rename', function(){
+				if($(this).children('input').hasClass('hidden')){
+					$(this).children('span').toggleClass('hidden');
+					$(this).children('input').toggleClass('hidden');
+					$(this).children('input').focus();
+				}
+			});
+
+			$(document).on('focusout', '.js-guest-group-rename input', function(){
+				console.log({
+						action: 'renameGuestGroup', 
+						groupId: $(this).closest('tr').data('group-id'), 
+						newName: $(this).val()
+					});
+				if($(this).val() !== ''){
+					createAjaxRequest({
+						action: 'renameGuestGroup', 
+						groupId: $(this).closest('tr').data('group-id'), 
+						newName: $(this).val()
+					});
+				} else {
+					$(this).parent().children('input').toggleClass('hidden');
+					$(this).parent().children('span').toggleClass('hidden');
+				}
+			});
+		});
+	</script>
+{% endblock%}

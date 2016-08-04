@@ -1,0 +1,17 @@
+<div id="ajax-guest-editor">
+	<div id="ajax-guest-editor-header">
+		<span>{{guest.title}} {{guest.firstName}} {{guest.lastName}}</span>
+		<span class="header-button fa fa-times" onclick="$('#ajax-guest-editor').remove();"></span>
+	</div>
+	<div id="ajax-guest-editor-content">
+		<h1>not finished!</h1>
+		{{form_start(editGuestForm, {'attr': {'id': 'ajax-guest-edit-form', 'action': 'test'}})}}
+			{{form_row(editGuestForm.firstName, {'attr': {'disabled':'disabled'}})}}
+			{{form_row(editGuestForm.lastName, {'attr': {'disabled':'disabled'}})}}
+			{{form_row(editGuestForm.title, {'attr': {'disabled':'disabled'}})}}
+			{{form_row(editGuestForm.submit, {'label': 'Manager.Guest.Submit.Create'})}}
+		{{form_end(editGuestForm)}}
+
+		{{guest.firstName}}
+	</div>
+</div>
